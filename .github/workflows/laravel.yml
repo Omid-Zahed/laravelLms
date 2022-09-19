@@ -2,9 +2,9 @@ name: Laravel
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main","test" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "main","test"  ]
 
 jobs:
   laravel-tests:
@@ -33,4 +33,4 @@ jobs:
         DB_CONNECTION: sqlite
         DB_DATABASE: database/database.sqlite
 
-      run: ls & ls vendro/bin & php artisan test
+      run: ls & ls vendor/bin & php artisan test
